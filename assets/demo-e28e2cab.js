@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i,e as m,a as c,n as a,d as l}from"./index-cf0d69d6.js";function p(n){let e;return{c(){e=m("main"),e.textContent="okr page"},m(t,s){c(t,e,s)},p:a,i:a,o:a,d(t){t&&l(e)}}}class f extends o{constructor(e){super(),r(this,e,null,p,i,{})}}export{f as default};
