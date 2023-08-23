@@ -13,6 +13,24 @@
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      console.log(`${location.origin}/sw.js`)
+      window.addEventListener('load', () => {
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register(`${location.origin}/sw.js`).then(n => {
+            console.log(n)
+          }).catch(e => {
+            console.error('serviceWorker register fail ', e)
+          })
+        }
+
+        if ('storage' in navigator && 'estimate' in navigator.storage) {
+          navigator.storage.estimate().then(estimate => {
+              console.log(`Using ${estimate.usage/1024/1024} out of ${estimate.quota/1024/1024} MB.And the proportion is ${estimate.usage/estimate.quota*100}%`);
+          });
+        }
+      })
+    </script>
     
   </body>
 </html>
