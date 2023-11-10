@@ -1,4 +1,4 @@
-var VERSION = 'v20230823';
+var VERSION = 'v20231110';
 
 var CACHE_LIST = [
   '/home/bg1.png',
